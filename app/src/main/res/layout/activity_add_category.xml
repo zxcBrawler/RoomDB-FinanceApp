@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddCategory">
+
+    <RadioGroup
+        android:id="@+id/radio_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton android:id="@+id/radio_insertAdd"
+            android:layout_width="200sp"
+            android:layout_height="wrap_content"
+            android:text="Пополнение"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:onClick="onRadioButtonClickedAdd"/>
+        <RadioButton android:id="@+id/radio_cutAdd"
+            android:layout_width="200sp"
+            android:layout_height="wrap_content"
+            android:text="Снятие"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:onClick="onRadioButtonClickedAdd"
+            app:layout_constraintStart_toEndOf="@id/radio_insert"/>
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/categoryEnter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/radio_group"
+        android:layout_margin="15sp"/>
+
+    <Button
+        android:id="@+id/addCategory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add category"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/categoryEnter"
+        android:layout_margin="15sp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
